@@ -39,8 +39,8 @@ Admins would be able to check an uncheck the components that the users have acce
 # Internals
 One of the underlying assumptions for this is system is that authentication and authorization are done in seperate systems.  After a user has been authenticated, a header is injected into the HTTP request with the username of the authenticate user.  The Authorization system picks up on this header and does the correct checks to ensure the user on is allow to do what they are permitted to do.
 
-##Authentication
+## Authentication
 I'm sure there is some code out there that we can ~~steal~~ borrow for this.  This will be a simple authentication mechanism, which will use cookies to store tokens.  To start, authentication tokens last forever.
 
-##Authorization
+## Authorization
 I'm going to have to do some more research as to how Hass brings from the frontend to the backend server, but this component will take the injected username from the headers, and make descisions on what action are allowed, what data can be seen.  
